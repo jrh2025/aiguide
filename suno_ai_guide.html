@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suno AI 完整介紹與使用指南</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .prose h2 {
+            font-size: 1.75rem;
+            margin-top: 0; /* Adjusted for tab panel */
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .prose h3 {
+            font-size: 1.375rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .prose table {
+            width: 100%;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .prose th {
+            background-color: #f9fafb;
+        }
+        .prose blockquote {
+            border-left-color: #fbbf24;
+            background-color: #fefce8;
+            color: #713f12;
+        }
+        /* For horizontal scrolling tabs on mobile */
+        .tabs-container::-webkit-scrollbar {
+            display: none;
+        }
+        .tabs-container {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto px-4 py-8 md:py-12">
+
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">Suno AI 完整深度解析與實戰指南</h1>
+            <p class="mt-4 text-lg text-gray-600">重新定義音樂創作的未來</p>
+        </header>
+
+        <!-- Tabbed Interface -->
+        <div class="max-w-4xl mx-auto">
+            <!-- Tab Buttons -->
+            <div class="border-b border-gray-200">
+                <nav class="-mb-px flex space-x-1 sm:space-x-2 overflow-x-auto tabs-container" aria-label="Tabs">
+                    <button class="tab-button whitespace-nowrap py-3 px-4 text-sm font-medium rounded-t-lg transition-colors duration-200">第一章：革命</button>
+                    <button class="tab-button whitespace-nowrap py-3 px-4 text-sm font-medium rounded-t-lg transition-colors duration-200">第二章：平台</button>
+                    <button class="tab-button whitespace-nowrap py-3 px-4 text-sm font-medium rounded-t-lg transition-colors duration-200">第三章：提示詞</button>
+                    <button class="tab-button whitespace-nowrap py-3 px-4 text-sm font-medium rounded-t-lg transition-colors duration-200">第四章：定價</button>
+                    <button class="tab-button whitespace-nowrap py-3 px-4 text-sm font-medium rounded-t-lg transition-colors duration-200">第五章：版權</button>
+                    <button class="tab-button whitespace-nowrap py-3 px-4 text-sm font-medium rounded-t-lg transition-colors duration-200">第六章：評測</button>
+                    <button class="tab-button whitespace-nowrap py-3 px-4 text-sm font-medium rounded-t-lg transition-colors duration-200">第七章：競品</button>
+                    <button class="tab-button whitespace-nowrap py-3 px-4 text-sm font-medium rounded-t-lg transition-colors duration-200">第八章：結論</button>
+                </nav>
+            </div>
+
+            <!-- Tab Panels -->
+            <div class="bg-white rounded-b-lg shadow-lg">
+                <!-- Panel 1 -->
+                <div class="tab-panel p-6 md:p-10 border-t-4">
+                    <div class="prose prose-lg max-w-none">
+                        <section>
+                            <h2>第一章：Suno AI 革命——重新定義音樂創作的未來</h2>
+                            <h3>1.1 Suno AI 簡介：不僅是工具，更是音樂創作的典範轉移</h3>
+                            <p>Suno AI 是一個先進的生成式人工智慧平台，其核心使命是將簡單的文字提示（text prompts）轉化為逼真且完整的歌曲，這些歌曲無縫融合了人聲與器樂編曲。該平台於 2023 年 12 月 20 日正式向公眾推出，旨在「打造一個人人都能創作出卓越音樂的未來」，致力於打破無論是業餘愛好者還是專業音樂人之間存在的創作壁壘。</p>
+                            <p>然而，將 Suno AI 僅僅定義為一個「文字轉音樂生成器」會嚴重低估其潛在的影響力。它代表了一場深刻的文化與技術層面的典範轉移。透過極大降低音樂創作的技術門檻，Suno AI 正在實現音樂的「民主化」，使其變得如同用智慧型手機拍照一樣普及和便捷。</p>
+                            <h3>1.2 創始團隊與願景：從 Kensho 到劍橋的音樂夢</h3>
+                            <p>Suno AI 的誕生地是美國麻薩諸塞州的劍橋市，由四位曾在人工智慧新創公司 Kensho 共事的成員共同創立。這支核心團隊不僅是來自 Meta、TikTok 等頂尖科技公司的 AI 專家，同時也是充滿熱情的音樂家。這種「音樂家與 AI 專家」的雙重身份，決定了 Suno 產品的設計思路與宏大願景：打造一個能夠理解並滿足創作者內心渴望的平台。</p>
+                            <h3>1.3 核心技術揭秘：淺談 Transformer 與 Diffusion 模型如何譜寫樂章</h3>
+                            <p>Suno AI 的音樂生成能力，源於其精密複雜的混合式 AI 架構，巧妙地結合了 Transformer 模型與 Diffusion 模型的優勢。</p>
+                            <ul>
+                                <li><strong>Transformer 模型：音樂的「作曲家」</strong> - 負責處理音樂的時序結構，預測下一個最有可能出現的音符、和弦或歌詞，從而構建出具有邏輯性和連貫性的音樂段落。</li>
+                                <li><strong>Diffusion 模型：音樂的「錄音師」與「混音師」</strong> - 專注於音訊的保真度與質感，透過系統性的「去噪」步驟，逐步還原出一個乾淨、精緻且高品質的音訊成品。</li>
+                            </ul>
+                            <p>這種雙軌並行的技術路徑，體現了在音樂的內在邏輯與外在的聲音品質之間取得平衡的持續挑戰。</p>
+                        </section>
+                    </div>
+                </div>
+                <!-- Panel 2 -->
+                <div class="tab-panel p-6 md:p-10 border-t-4">
+                     <div class="prose prose-lg max-w-none">
+                        <section>
+                            <h2>第二章：Suno AI 平台全解析——從註冊到精通</h2>
+                            <h3>2.1 初次上手：帳號設定與介面導覽</h3>
+                            <p>使用者可以前往其官方網站 suno.com，選擇使用 Discord、Google 或 Microsoft 帳號進行快速註冊和登入。主控台介面設計以使用者友好為核心，主要由創作區 (Create)、媒體庫 (Library) 和探索/社群動態 (Explore/Trending) 構成。</p>
+                            <h3>2.2 兩種創作模式：簡易模式 vs. 自訂模式</h3>
+                            <ul>
+                                <li><strong>簡易模式 (Simple Mode)</strong>：靈感的快速素描本。只需在單一輸入框中提供描述性文字提示，Suno 便會迅速生成兩個不同版本的歌曲。</li>
+                                <li><strong>自訂模式 (Custom Mode)</strong>：精雕細琢的畫布。提供獨立的歌詞、音樂風格和標題輸入欄位，實現更精準的控制。</li>
+                            </ul>
+                            <h3>2.3 核心功能詳解</h3>
+                            <p>Suno 的付費方案解鎖了一系列強大的進階功能：</p>
+                            <ul>
+                                <li><strong>歌曲擴展 (Extend)</strong>：將短小的音樂片段發展成完整歌曲的核心功能。</li>
+                                <li><strong>混音 (Remix) 與編輯</strong>：對已生成的歌曲進行修改，但目前此功能被普遍認為是平台的短板。</li>
+                                <li><strong>角色 (Personas)</strong>：(Pro 功能) 學習現有歌曲的聲線和風格，並應用到新創作中。</li>
+                                <li><strong>音訊上傳 (Upload Audio)</strong>：以上傳的音訊檔案為基礎進行創作。</li>
+                                <li><strong>音訊分軌 (Extract Stems)</strong>：(Pro/Premier 功能) 將歌曲分解成多達 12 條獨立的音訊軌道（如人聲、鼓、貝斯等），是連接 AI 創意與專業 DAW 軟體後期製作的關鍵橋樑。</li>
+                            </ul>
+                            <blockquote>
+                                <p><strong>核心工作流程哲學</strong>：Suno 旨在成為一個高效的「前端」音樂創意生成器，而非全功能的線上 DAW。最佳實踐是在 Suno 中生成素材，再匯出分軌至專業軟體進行精細編輯。</p>
+                            </blockquote>
+                        </section>
+                    </div>
+                </div>
+                 <!-- Panel 3 -->
+                <div class="tab-panel p-6 md:p-10 border-t-4">
+                     <div class="prose prose-lg max-w-none">
+                        <section>
+                            <h2>第三章：提示詞的藝術——駕馭 AI 的創作靈魂</h2>
+                            <h3>3.1 高效提示詞的四大支柱</h3>
+                            <p>一個結構良好、內容豐富的提示詞，通常建立在以下四個核心要素之上：</p>
+                            <ol>
+                                <li><strong>類型與風格 (Genre and Style)</strong>：具體描述音樂類型，如「90 年代另類搖滾，帶有垃圾搖滾的吉他音色」。</li>
+                                <li><strong>情緒與氛圍 (Mood and Emotion)</strong>：設定歌曲的情感基調，如「振奮人心的、充滿希望的頌歌」。</li>
+                                <li><strong>樂器與製作 (Instrumentation and Production)</strong>：指明希望聽到的樂器與製作風格，如「Lo-fi 製作，帶有黑膠唱片的炒豆聲」。</li>
+                                <li><strong>人聲偏好 (Vocal Preferences)</strong>：描述期望的歌手類型和演唱方式，如「空靈、輕柔的女聲，帶有大量混響」。</li>
+                            </ol>
+                            <h3>3.2 精準控制的關鍵：元標籤 (Metatags) 的進階應用</h3>
+                            <p>元標籤是在方括號 <code>[]</code> 中使用的特殊指令，是使用者對 AI 進行最直接、最精確控制的工具。</p>
+                            <div class="overflow-x-auto">
+                                <table>
+                                    <thead class="bg-gray-50">
+                                        <tr>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">類別</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">元標籤範例</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">功能</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200">
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap">歌曲結構</td>
+                                            <td class="px-6 py-4 whitespace-nowrap font-mono">[Intro], [Verse], [Chorus]</td>
+                                            <td>定義歌曲的各個段落。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap">人聲風格</td>
+                                            <td class="px-6 py-4 whitespace-nowrap font-mono">[Male singer], [Whispering]</td>
+                                            <td>指定演唱者的性別、演唱方式和效果。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap">樂器類型</td>
+                                            <td class="px-6 py-4 whitespace-nowrap font-mono">[Acoustic guitar], [Solo]</td>
+                                            <td>強調在特定段落中使用的主要樂器。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap">音效與氛圍</td>
+                                            <td class="px-6 py-4 whitespace-nowrap font-mono">[Applause], [Silence]</td>
+                                            <td>在歌曲中插入特定的環境音效。</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h3>3.3 實戰演練與常見錯誤</h3>
+                            <ul>
+                                <li><strong>實戰技巧</strong>：保持簡潔具體；使用相同的標題作為「種子」以維持風格統一；利用歌詞區擴充提示詞。</li>
+                                <li><strong>常見錯誤</strong>：描述模糊；忽略結構標籤；使用相互衝突的風格詞彙。</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+                 <!-- Panel 4 -->
+                <div class="tab-panel p-6 md:p-10 border-t-4">
+                     <div class="prose prose-lg max-w-none">
+                        <section>
+                            <h2>第四章：方案與定價策略深度分析</h2>
+                            <h3>4.1 官方收費方案詳解</h3>
+                            <div class="overflow-x-auto">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>功能/方案</th>
+                                            <th>免費方案 (Free)</th>
+                                            <th>專業方案 (Pro)</th>
+                                            <th>頂級方案 (Premier)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>月費/年費</td>
+                                            <td>$0</td>
+                                            <td>$10/月 或 $96/年</td>
+                                            <td>$30/月 或 $288/年</td>
+                                        </tr>
+                                        <tr>
+                                            <td>每月點數</td>
+                                            <td>每日 50 點</td>
+                                            <td>每月 2,500 點</td>
+                                            <td>每月 10,000 點</td>
+                                        </tr>
+                                        <tr>
+                                            <td>約可生成歌曲數</td>
+                                            <td>每日 10 首</td>
+                                            <td>每月 500 首</td>
+                                            <td>每月 2,000 首</td>
+                                        </tr>
+                                        <tr>
+                                            <td>商業使用權</td>
+                                            <td class="text-red-600">否</td>
+                                            <td class="text-green-600">是</td>
+                                            <td class="text-green-600">是</td>
+                                        </tr>
+                                        <tr>
+                                            <td>同時生成任務數</td>
+                                            <td>2 (共享佇列)</td>
+                                            <td>10 (優先佇列)</td>
+                                            <td>10 (優先佇列)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>音訊分軌 (Stems)</td>
+                                            <td class="text-red-600">否</td>
+                                            <td class="text-green-600">是</td>
+                                            <td class="text-green-600">是</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <blockquote>
+                                <p><strong>警惕非官方平台</strong>：使用者應保持警惕，直接透過官方網站 <strong>suno.com</strong> 進行註冊和訂閱，以確保其創作活動的安全性和合規性，避免使用看似官方的第三方網站。</p>
+                            </blockquote>
+                        </section>
+                    </div>
+                </div>
+                 <!-- Panel 5 -->
+                <div class="tab-panel p-6 md:p-10 border-t-4">
+                     <div class="prose prose-lg max-w-none">
+                        <section>
+                            <h2>第五章：版權與商業授權的法律迷宮</h2>
+                            <h3>5.1 所有權歸屬：您真的「擁有」您創作的歌曲嗎？</h3>
+                            <p>對於付費使用者，Suno 會將歌曲的所有權「轉讓」給使用者。然而，這其中存在一個關鍵的法律細微差別。</p>
+                            <blockquote>
+                                <p><strong>「所有權的幻覺」</strong>：Suno 授予的是基於其服務條款的<strong>契約性權利</strong>，而非一個受各國法律普遍承認的<strong>法定版權</strong>。美國版權局目前普遍不願意為主要由 AI 生成的作品提供版權保護。這意味著您擁有使用許可，但在面對侵權時可能缺乏法律追訴的權力。</p>
+                            </blockquote>
+                            <p>不過，如果您提供了自己原創的歌詞，您始終擁有這些歌詞的版權。</p>
+                            <h3>5.2 商業使用權詳解</h3>
+                            <ul>
+                                <li><strong>免費方案</strong>：嚴格限制在個人、非商業用途。</li>
+                                <li><strong>付費方案</strong>：獲得通用商業使用條款授權，可將歌曲用於串流平台、廣告、電影等。此授權不具備追溯效力。</li>
+                            </ul>
+                            <h3>5.3 取消訂閱後的權利延續</h3>
+                            <p>一項對創作者非常友好的政策：對於在付費訂閱期間創作的歌曲，使用者在<strong>取消訂閱後，仍然保留這些歌曲的商業使用權</strong>。</p>
+                        </section>
+                    </div>
+                </div>
+                 <!-- Panel 6 -->
+                <div class="tab-panel p-6 md:p-10 border-t-4">
+                     <div class="prose prose-lg max-w-none">
+                        <section>
+                            <h2>第六章：實戰評測——Suno AI 的優勢與挑戰</h2>
+                            <h3>6.1 優勢分析</h3>
+                            <ul>
+                                <li><strong>卓越的音質</strong>：生成的人聲和樂器聲音極其真實、可信度高。</li>
+                                <li><strong>廣泛的類型適應性</strong>：能準確處理從流行到小眾的各種音樂風格。</li>
+                                <li><strong>驚人的生成速度</strong>：通常在不到一分鐘內即可產出兩段歌曲片段。</li>
+                                <li><strong>直觀的易用性</strong>：介面簡潔，極大降低了使用門檻。</li>
+                                <li><strong>慷慨的免費方案</strong>：每日 50 點數足以滿足非商業探索的需求。</li>
+                            </ul>
+                            <h3>6.2 缺點與限制</h3>
+                            <ul>
+                                <li><strong>內建編輯功能薄弱</strong>：這是使用者抱怨最集中的地方，微調往往會破壞歌曲的統一性。</li>
+                                <li><strong>創意控制力有限</strong>：對旋律和和聲的細微走向缺乏直接控制。</li>
+                                <li><strong>生成結果的不一致性</strong>：AI 有時會忽略關鍵指令或出現不自然的演唱瑕疵。</li>
+                                <li><strong>潛在的同質化風險</strong>：若提示詞不夠具體，生成的歌曲容易缺乏個性。</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+                 <!-- Panel 7 -->
+                <div class="tab-panel p-6 md:p-10 border-t-4">
+                     <div class="prose prose-lg max-w-none">
+                        <section>
+                            <h2>第七章：市場定位與競品分析——Suno vs. Udio</h2>
+                            <h3>7.1 兩大巨頭的正面對決</h3>
+                            <p>Suno AI 與 Udio AI 構成了市場上最主要的競爭格局，它們代表了兩種不同的創作哲學。</p>
+                            <div class="overflow-x-auto">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>功能維度</th>
+                                            <th>Suno AI</th>
+                                            <th>Udio AI</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>整體哲學</strong></td>
+                                            <td>快速、易用、結構導向。適合<strong>快速原型設計</strong>。</td>
+                                            <td>高保真、模組化。適合<strong>精細雕琢</strong>和追求極致音質。</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>音質</strong></td>
+                                            <td>品質良好，但有時被描述為略顯「單薄」。</td>
+                                            <td>普遍被認為音質更優，聲音更乾淨、飽滿，接近<strong>錄音室水準</strong>。</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>易用性</strong></td>
+                                            <td>介面極其直觀，生成完整歌曲流程更快，對<strong>新手非常友好</strong>。</td>
+                                            <td>以 32 秒片段建構，需要更多手動操作，學習曲線稍高。</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>音訊分軌</strong></td>
+                                            <td>提供人聲和樂器兩條主要分軌。</td>
+                                            <td>提供更詳細的分軌（人聲、鼓、貝斯等），為後期製作提供更大空間。</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>最佳場景</strong></td>
+                                            <td>快速生成歌曲創意、影片背景音樂、歌詞可視化。</td>
+                                            <td>高品質音樂製作、人聲精細生成、需要詳細分軌的專業專案。</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p>總結來說，Suno 像一位才思敏捷的作曲家，能迅速勾勒藍圖；而 Udio 則像一位技藝精湛的錄音工程師，專注於雕琢聲音細節。</p>
+                        </section>
+                    </div>
+                </div>
+                <!-- Panel 8 -->
+                <div class="tab-panel p-6 md:p-10 border-t-4">
+                    <div class="prose prose-lg max-w-none">
+                        <section>
+                            <h2>第八章：結論與前瞻——Suno AI 的下一步與您的音樂之旅</h2>
+                            <h3>8.1 核心要點總結</h3>
+                            <ul>
+                                <li><strong>定位</strong>：一個革命性的音樂<strong>創意生成引擎</strong>，而非全功能的 DAW。</li>
+                                <li><strong>技能</strong>：<strong>提示詞工程 (Prompt Engineering)</strong> 已成為一種核心的創作技能。</li>
+                                <li><strong>商業與法律</strong>：付費方案授予<strong>商業使用權</strong>，但使用者需理解「所有權」與「版權」的法律差距。</li>
+                                <li><strong>市場格局</strong>：Suno 以<strong>速度與結構</strong>見長，而競品 Udio 在<strong>音訊保真度</strong>上佔優。</li>
+                            </ul>
+                            <h3>8.3 給創作者的最終建議</h3>
+                            <ul>
+                                <li><strong>對於業餘愛好者</strong>：盡情享受免費方案，將其作為探索音樂的娛樂工具。</li>
+                                <li><strong>對於內容創作者</strong>：Pro 方案是極具性價比的投資，能為您的內容提供合法、客製化的背景音樂庫。</li>
+                                <li><strong>對於獨立音樂人與專業製作人</strong>：將 Suno 視為創作武器庫中的新式武器，擁抱「生成優先，DAW 精修」的工作流程，讓 AI 成為您最高效的創作夥伴。</li>
+                            </ul>
+                            <blockquote>
+                                <p>無論您是誰，踏上 Suno AI 的音樂之旅都意味著進入一個充滿無限可能的全新領域。請保持開放的心態，不斷實驗，並始終記住：技術只是工具，最終觸動人心的，仍然是您獨一無二的創意與情感。</p>
+                            </blockquote>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="text-center mt-12 text-sm text-gray-500">
+            <p>此網頁內容根據 "Suno AI 完整介紹與使用指南" 文件生成。</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.tab-button');
+            const panels = document.querySelectorAll('.tab-panel');
+
+            const colors = [
+                { text: 'text-blue-600', hoverBg: 'hover:bg-blue-100', activeBg: 'bg-blue-600', activeBorder: 'border-blue-600' },
+                { text: 'text-indigo-600', hoverBg: 'hover:bg-indigo-100', activeBg: 'bg-indigo-600', activeBorder: 'border-indigo-600' },
+                { text: 'text-purple-600', hoverBg: 'hover:bg-purple-100', activeBg: 'bg-purple-600', activeBorder: 'border-purple-600' },
+                { text: 'text-pink-600', hoverBg: 'hover:bg-pink-100', activeBg: 'bg-pink-600', activeBorder: 'border-pink-600' },
+                { text: 'text-red-600', hoverBg: 'hover:bg-red-100', activeBg: 'bg-red-600', activeBorder: 'border-red-600' },
+                { text: 'text-orange-600', hoverBg: 'hover:bg-orange-100', activeBg: 'bg-orange-600', activeBorder: 'border-orange-600' },
+                { text: 'text-amber-600', hoverBg: 'hover:bg-amber-100', activeBg: 'bg-amber-600', activeBorder: 'border-amber-600' },
+                { text: 'text-teal-600', hoverBg: 'hover:bg-teal-100', activeBg: 'bg-teal-600', activeBorder: 'border-teal-600' }
+            ];
+
+            const switchTab = (activeIndex) => {
+                tabs.forEach((tab, index) => {
+                    const color = colors[index];
+                    const panel = panels[index];
+                    
+                    // Reset all tabs and panels to their inactive state
+                    tab.classList.remove(color.activeBg, 'text-white', 'font-semibold');
+                    tab.classList.add(color.text, color.hoverBg, 'bg-transparent');
+                    panel.classList.add('hidden');
+                    panel.classList.remove(color.activeBorder);
+
+                    // Activate the selected tab and panel
+                    if (index === activeIndex) {
+                        tab.classList.add(color.activeBg, 'text-white', 'font-semibold');
+                        tab.classList.remove(color.text, color.hoverBg, 'bg-transparent');
+                        panel.classList.remove('hidden');
+                        panel.classList.add(color.activeBorder);
+                    }
+                });
+
+                // Scroll the active tab into view on smaller screens if it's out of view
+                const activeTab = tabs[activeIndex];
+                if (activeTab.scrollIntoView) {
+                     activeTab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                }
+            };
+
+            tabs.forEach((tab, index) => {
+                tab.addEventListener('click', () => switchTab(index));
+            });
+
+            // Initialize by activating the first tab
+            switchTab(0);
+        });
+    </script>
+
+</body>
+</html>
+
